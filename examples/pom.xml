@@ -23,4 +23,28 @@
       <version>${project.version}</version>
     </dependency>
   </dependencies>
+  
+   <build>
+         <plugins>
+      	<plugin>
+	    <groupId>org.pitest</groupId>
+	    <artifactId>pitest-maven</artifactId>
+	    <version>1.1.9</version>
+	    <configuration>
+	      <skip>true</skip>
+	        <targetClasses>
+	            <param>com.squareup.moshi.*</param>
+	        </targetClasses>
+		<failWhenNoMutations>false</failWhenNoMutations>
+	            <outputFormats>
+	                <outputFormat>XML</outputFormat>
+	                <outputFormat>HTML</outputFormat>                      
+	            </outputFormats>   
+	    </configuration>
+</plugin>
+ </plugins>
+      </build>
+        
+        
+        
 </project>
